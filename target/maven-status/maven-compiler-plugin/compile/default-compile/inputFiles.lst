@@ -1,0 +1,10 @@
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/web/service/SzovegService.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/web/encryption/Encryption.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/web/repository/SzovegRepository.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/web/encryption/EncryptionInterface.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/web/service/exception/Exceptions.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/SecretsharingApplication.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/model/Szoveg.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/web/repository/SzovegRepositoryImpl.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/web/service/SzovegServiceImpl.java
+/Users/horvathroland/IdeaProjects/secretsharing/src/main/java/com/example/secretsharing/web/controller/SzovegController.java

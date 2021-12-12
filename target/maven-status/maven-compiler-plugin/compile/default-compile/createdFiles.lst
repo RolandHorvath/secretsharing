@@ -1,0 +1,10 @@
+com/example/secretsharing/web/service/SzovegServiceImpl.class
+com/example/secretsharing/web/encryption/EncryptionInterface.class
+com/example/secretsharing/web/service/SzovegService.class
+com/example/secretsharing/web/encryption/Encryption.class
+com/example/secretsharing/web/service/exception/Exceptions.class
+com/example/secretsharing/web/repository/SzovegRepository.class
+com/example/secretsharing/web/controller/SzovegController.class
+com/example/secretsharing/SecretsharingApplication.class
+com/example/secretsharing/model/Szoveg.class
+com/example/secretsharing/web/repository/SzovegRepositoryImpl.class

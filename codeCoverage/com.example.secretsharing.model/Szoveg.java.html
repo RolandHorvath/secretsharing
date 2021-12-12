@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Szoveg.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">secretsharing</a> &gt; <a href="index.source.html" class="el_package">com.example.secretsharing.model</a> &gt; <span class="el_source">Szoveg.java</span></div><h1>Szoveg.java</h1><pre class="source lang-java linenums">package com.example.secretsharing.model;
+
+public class Szoveg {
+
+    private String azonosito;
+
+    private String szoveg;
+
+    private String jelszo;
+
+    public String getJelszo() {
+<span class="fc" id="L12">        return jelszo;</span>
+    }
+
+    public void setJelszo(String jelszo) {
+<span class="nc" id="L16">        this.jelszo = jelszo;</span>
+<span class="nc" id="L17">    }</span>
+
+    public String getAzonosito() {
+<span class="fc" id="L20">        return azonosito;</span>
+    }
+
+    public void setAzonosito(String azonosito) {
+<span class="nc" id="L24">        this.azonosito = azonosito;</span>
+<span class="nc" id="L25">    }</span>
+
+    public String getSzoveg() {
+<span class="fc" id="L28">        return szoveg;</span>
+    }
+
+    public void setSzoveg(String szoveg) {
+<span class="fc" id="L32">        this.szoveg = szoveg;</span>
+<span class="fc" id="L33">    }</span>
+
+<span class="nc" id="L35">    public Szoveg() {</span>
+
+<span class="nc" id="L37">    }</span>
+
+<span class="fc" id="L39">    public Szoveg(String azonosito, String szoveg,String jelszo) {</span>
+<span class="fc" id="L40">        this.azonosito = azonosito;</span>
+<span class="fc" id="L41">        this.szoveg = szoveg;</span>
+<span class="fc" id="L42">        this.jelszo = jelszo;</span>
+<span class="fc" id="L43">    }</span>
+
+    @Override
+    public String toString() {
+<span class="nc" id="L47">        return &quot;Szoveg{&quot; +</span>
+                &quot;azonosito='&quot; + azonosito + '\'' +
+                &quot;, szoveg='&quot; + szoveg + '\'' +
+                &quot;, jelszo='&quot; + jelszo + '\'' +
+                '}';
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

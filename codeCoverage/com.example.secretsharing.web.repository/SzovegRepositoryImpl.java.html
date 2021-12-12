@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="hu"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SzovegRepositoryImpl.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">secretsharing</a> &gt; <a href="index.source.html" class="el_package">com.example.secretsharing.web.repository</a> &gt; <span class="el_source">SzovegRepositoryImpl.java</span></div><h1>SzovegRepositoryImpl.java</h1><pre class="source lang-java linenums">package com.example.secretsharing.web.repository;
+
+import com.example.secretsharing.model.Szoveg;
+import com.example.secretsharing.web.service.exception.Exceptions;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.stereotype.Repository;
+
+@Repository
+<span class="fc" id="L11">public class SzovegRepositoryImpl implements SzovegRepository {</span>
+
+    @Autowired
+    private JdbcTemplate jdbcTemplate;
+
+    @Override
+    public void setSzoveg(Szoveg szoveg,byte[] titkositott,String encodedKey) {
+<span class="fc" id="L18">        final String sql = &quot;INSERT INTO szovegek (azonosito,szoveg,jelszo,kulcs) VALUES (?,?,?,?)&quot;;</span>
+        try{
+<span class="nc" id="L20">            jdbcTemplate.update(sql,szoveg.getAzonosito(),titkositott,szoveg.getJelszo(),encodedKey);</span>
+<span class="fc" id="L21">        } catch (DuplicateKeyException duplicateKeyException){</span>
+<span class="fc" id="L22">            throw new Exceptions(&quot;Foglalt azonosító&quot;);</span>
+<span class="nc" id="L23">        }</span>
+<span class="nc" id="L24">    }</span>
+
+    @Override
+    public byte[] getSzoveg(Szoveg szoveg) {
+<span class="fc" id="L28">        String sql = &quot;SELECT szoveg FROM szovegek WHERE azonosito ='&quot;+ szoveg.getAzonosito()+ &quot;' AND jelszo='&quot;+szoveg.getJelszo()+&quot;'&quot;;</span>
+<span class="fc" id="L29">        byte[] titkositott= jdbcTemplate.queryForObject(sql, byte[].class);</span>
+<span class="fc" id="L30">        return titkositott;</span>
+    }
+
+    @Override
+    public String getKulcs(Szoveg szoveg) {
+<span class="fc" id="L35">        String sql = &quot;SELECT kulcs FROM szovegek WHERE azonosito ='&quot;+ szoveg.getAzonosito()+ &quot;' AND jelszo='&quot;+szoveg.getJelszo()+&quot;'&quot;;</span>
+<span class="fc" id="L36">        String kulcs = jdbcTemplate.queryForObject(sql, String.class);</span>
+<span class="fc" id="L37">        return kulcs;</span>
+    }
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

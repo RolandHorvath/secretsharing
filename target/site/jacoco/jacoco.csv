@@ -1,0 +1,8 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+secretsharing,com.example.secretsharing.web.service,SzovegServiceImpl,7,34,0,0,2,8,0,3,0,3
+secretsharing,com.example.secretsharing.web.encryption,Encryption,0,81,0,0,0,20,0,4,0,4
+secretsharing,com.example.secretsharing,SecretsharingApplication,5,3,0,0,2,1,1,1,1,1
+secretsharing,com.example.secretsharing.model,Szoveg,39,25,0,0,7,10,4,5,4,5
+secretsharing,com.example.secretsharing.web.service.exception,Exceptions,0,4,0,0,0,2,0,1,0,1
+secretsharing,com.example.secretsharing.web.controller,SzovegController,16,3,0,0,6,1,4,1,4,1
+secretsharing,com.example.secretsharing.web.repository,SzovegRepositoryImpl,27,63,0,0,3,10,0,4,0,4
